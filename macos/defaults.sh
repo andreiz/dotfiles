@@ -22,9 +22,6 @@ function open() {
     app=$1
     osascript << EOM
 tell application "$app" to activate
-tell application "System Events" to tell process "iTerm2"
-set frontmost to true
-end tell
 EOM
 }
 

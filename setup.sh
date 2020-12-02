@@ -94,7 +94,7 @@ function install_packages_with_brewfile() {
     fi
 }
 
-function configure_macOS_defaults() {
+function configure_macos_defaults() {
     info "Configuring macOS defaults"
 
     current_dir=$(pwd)
