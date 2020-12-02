@@ -79,38 +79,16 @@ function install_homebrew() {
 function install_packages_with_brewfile() {
     info "Installing Brewfile packages"
 
-    TAP=${DOTFILES_REPO}/brew/Brewfile_tap
-    BREW=${DOTFILES_REPO}/brew/Brewfile_brew
-    CASK=${DOTFILES_REPO}/brew/Brewfile_cask
-    MAS=${DOTFILES_REPO}/brew/Brewfile_mas
+    BREWFILE=${DOTFILES_REPO}/brew/Brewfile
 
-    if hash parallel 2>/dev/null; then
-        substep "parallel already exists"
-    else
-        if brew install parallel &> /dev/null; then
-            printf 'will cite' | parallel --citation &> /dev/null
-            substep "parallel installation succeeded"
-        else
-            error "parallel installation failed"
-            exit 1
-        fi
-    fi
-
-    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
+    if brew bundle check --file="$BREWFILE" &> /dev/null; then
         success "Brewfile packages are already installed"
     else
-        if brew bundle --file="$TAP"; then
-            substep "Brewfile_tap installation succeeded"
-
-            export HOMEBREW_CASK_OPTS="--no-quarantine"
-            if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
-                success "Brewfile packages installation succeeded"
-            else
-                error "Brewfile packages installation failed"
-                exit 1
-            fi
+        export HOMEBREW_CASK_OPTS="--no-quarantine"
+        if brew bundle --file="$BREWFILE"; then
+            success "Brewfile packages installation succeeded"
         else
-            error "Brewfile_tap installation failed"
+            error "Brewfile packages installation failed"
             exit 1
         fi
     fi
