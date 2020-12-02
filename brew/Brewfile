@@ -1,3 +1,47 @@
+# Taps
+#
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+# Brew formulae
+#
+# brew "ack"
+# brew "antigen"
+# brew "sqlite"
+# brew "awscli"
+# brew "b2-tools"
+# brew "bat"
+# brew "certbot"
+# brew "fd"
+# brew "ffmpeg"
+# brew "fzf"
+brew "git"
+# brew "htop"
+# brew "id3v2"
+# brew "mas"
+# brew "media-info"
+# brew "nmap"
+# brew "nvm"
+# brew "psgrep"
+# brew "pstree"
+# brew "pyenv-virtualenv"
+# brew "rclone"
+# brew "ripgrep"
+# brew "rust"
+# brew "speedtest-cli"
+# brew "starship"
+# brew "telnet"
+# brew "timedog"
+# brew "tree"
+# brew "truncate"
+# brew "unrar"
+# brew "zsh"
+
+# Casks
+#
 # cask "1clipboard"
 # cask "1password"
 # cask "adobe-acrobat-reader"
@@ -67,3 +111,22 @@ cask "anki"
 # cask "vox"
 # cask "xee"
 # cask "zoom"
+
+# Apple Store apps
+#
+mas "Bear", id: 1091189122
+# mas "Disk Speed Test", id: 425264550
+# mas "Display Maid", id: 450063525
+# mas "GarageBand", id: 682658836
+# mas "iMovie", id: 408981434
+# mas "Keynote", id: 409183694
+# mas "Microsoft Remote Desktop", id: 1295203466
+# mas "Monosnap", id: 540348655
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Slack", id: 803453959
+# mas "The Unarchiver", id: 425424353
+# mas "Things", id: 904280696
+# mas "uBlock", id: 1385985095
+# mas "Unsplash Wallpapers", id: 1284863847
+# mas "Vimari", id: 1480933944
