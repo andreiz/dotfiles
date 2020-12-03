@@ -5,6 +5,10 @@ main() {
     # settings we’re about to change
     osascript -e 'tell application "System Preferences" to quit'
 
+    cd "$(dirname "${BASH_SOURCE}")";
+
+    source ./system.sh
+
     quit "Dock"
     # Don’t show recent applications in Dock
     defaults write com.apple.dock show-recents -bool false
