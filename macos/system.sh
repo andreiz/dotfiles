@@ -138,3 +138,37 @@ defaults write -g AppleFirstWeekday -dict gregorian 2
 # Set 24 hour time format
 defaults write -g AppleICUForce24HourTime -bool true
 
+###############################################################################
+# Energy saving                                                               #
+###############################################################################
+
+# Enable lid wakeup
+sudo pmset -a lidwake 1
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Slightly dim the display when on battery power
+sudo pmset -b halfdim 1
+
+# Sleep the display after 8 minutes when on battery power
+sudo pmset -b displaysleep 8
+
+# Sleep the display after 1 hour when on power adapter
+sudo pmset -c displaysleep 60
+
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
+# Set machine sleep to 15 minutes on battery
+sudo pmset -b sleep 15
+
+# Never go into computer sleep mode
+sudo systemsetup -setcomputersleep Off > /dev/null
+
+# Hibernation mode
+# 0: Disable hibernation (speeds up entering sleep mode)
+# 3: Copy RAM to disk so the system state can still be restored in case of a
+#    power failure.
+sudo pmset -a hibernatemode 3
+
