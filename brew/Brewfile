@@ -27,6 +27,7 @@ brew "nmap"
 brew "nvm"
 brew "psgrep"
 brew "pstree"
+brew "python3"
 brew "pyenv-virtualenv"
 brew "rclone"
 brew "ripgrep"
@@ -117,7 +118,7 @@ cask "zoom"
 mas "Bear", id: 1091189122
 mas "Disk Speed Test", id: 425264550
 mas "Display Maid", id: 450063525
-mas "GarageBand", id: 682658836
+#mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Microsoft Remote Desktop", id: 1295203466

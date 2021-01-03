@@ -6,7 +6,9 @@ main() {
     clone_dotfiles_repo
     install_homebrew
     install_packages_with_brewfile
+    install_pip_packages
     configure_macos_defaults
+    update_login_items
 }
 
 DOTFILES_REPO=~/projects/dotfiles
@@ -76,6 +78,7 @@ function install_homebrew() {
     fi
 }
 
+
 function install_packages_with_brewfile() {
     info "Installing Brewfile packages"
 
@@ -94,6 +97,19 @@ function install_packages_with_brewfile() {
     fi
 }
 
+function install_pip_packages() {
+    info "Installing pip packages"
+    REQUIREMENTS_FILE=${DOTFILES_REPO}/pip/requirements.txt
+
+    if pip3 install -r "$REQUIREMENTS_FILE" 1> /dev/null; then
+        success "pip packages successfully installed"
+    else
+        error "pip packages installation failed"
+        exit 1
+    fi
+
+}
+
 function configure_macos_defaults() {
     info "Configuring macOS defaults"
 
@@ -108,6 +124,18 @@ function configure_macos_defaults() {
         exit 1
     fi
 }
+
+function update_login_items() {
+    info "Updating login items"
+
+    if osascript ${DOTFILES_REPO}/macos/login_items.applescript &> /dev/null; then
+        success "Login items updated successfully "
+    else
+        error "Login items update failed"
+        exit 1
+    fi
+}
+
 
 function pull_latest() {
     substep "Pulling latest changes in ${1} repository"
