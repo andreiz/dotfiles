@@ -1,15 +1,12 @@
 # "¬" charachter tells osascript that the line continues
 set login_item_list to {¬
     "Alfred 4",¬
-    "Arq Agent",¬
-    "Bartender 3",¬
     "BetterTouchTool",¬
-    "Display Maid",¬
     "Dropbox",¬
-    "Fantastical 2",¬
+    "Fantastical",¬
     "Karabiner-Elements",¬
-    "Things",¬
-    "Things Helper",¬
+    "Things3",¬
+    "ThingsMacSandboxHelper",¬
     "Vanilla",¬
 }
 
