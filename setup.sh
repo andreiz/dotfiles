@@ -7,11 +7,13 @@ main() {
     install_homebrew
     install_packages_with_brewfile
     install_pip_packages
+    setup_symlinks
     configure_macos_defaults
     update_login_items
 }
 
 DOTFILES_REPO=~/projects/dotfiles
+export PATH=/usr/local/bin:$PATH
 
 function ask_for_sudo() {
     info "Prompting for sudo password"
@@ -110,6 +112,15 @@ function install_pip_packages() {
 
 }
 
+function setup_symlinks() {
+    info "Setting up symlinks"
+
+    symlink "zshrc"         ${DOTFILES_REPO}/zsh/zshrc      ~/.zshrc
+    symlink "zsh config"    ${DOTFILES_REPO}/zsh/config     ~/.zsh
+
+    success "Symlinks successfully setup"
+}
+
 function configure_macos_defaults() {
     info "Configuring macOS defaults"
 
@@ -136,6 +147,23 @@ function update_login_items() {
     fi
 }
 
+function symlink() {
+    application=$1
+    point_to=$2
+    destination=$3
+    destination_dir=$(dirname "$destination")
+
+    if test ! -e "$destination_dir"; then
+        substep "Creating ${destination_dir}"
+        mkdir -p "$destination_dir"
+    fi
+    if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
+        substep "Symlinking for \"${application}\" done"
+    else
+        error "Symlinking for \"${application}\" failed"
+        exit 1
+    fi
+}
 
 function pull_latest() {
     substep "Pulling latest changes in ${1} repository"
