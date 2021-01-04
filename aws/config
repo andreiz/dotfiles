@@ -1,0 +1,6 @@
+[profile captured]
+region = us-west-2
+output = text
+[profile default]
+region = us-west-2
+output = text
