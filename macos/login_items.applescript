@@ -7,7 +7,7 @@ set login_item_list to {¬
     "Karabiner-Elements",¬
     "Things3",¬
     "ThingsMacSandboxHelper",¬
-    "Vanilla",¬
+    "Vanilla"¬
 }
 
 tell application "System Events" to delete every login item
