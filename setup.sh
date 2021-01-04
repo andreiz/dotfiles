@@ -115,8 +115,21 @@ function install_pip_packages() {
 function setup_symlinks() {
     info "Setting up symlinks"
 
-    symlink "zshrc"         ${DOTFILES_REPO}/zsh/zshrc      ~/.zshrc
-    symlink "zsh config"    ${DOTFILES_REPO}/zsh/config     ~/.zsh
+    symlink "aws"           ${DOTFILES_REPO}/aws                ~/.aws
+
+    symlink "gitconfig"     ${DOTFILES_REPO}/git/config         ~/.gitconfig
+    symlink "gitignore"     ${DOTFILES_REPO}/git/gitignore      ~/.gitignore
+
+    symlink "karabiner"     ${DOTFILES_REPO}/karabiner          ~/.config/karabiner
+
+    symlink "rclone"        ${DOTFILES_REPO}/rclone             ~/.config/rclone
+
+    symlink "screen"        ${DOTFILES_REPO}/screen/screenrc    ~/.screenrc
+
+    symlink "ssh"           ${DOTFILES_REPO}/ssh/config         ~/.ssh/config
+
+    symlink "zshrc"         ${DOTFILES_REPO}/zsh/zshrc          ~/.zshrc
+    symlink "zsh config"    ${DOTFILES_REPO}/zsh/config         ~/.zsh
 
     success "Symlinks successfully setup"
 }
