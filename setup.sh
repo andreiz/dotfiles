@@ -120,11 +120,13 @@ function setup_symlinks() {
     symlink "gitconfig"     ${DOTFILES_REPO}/git/config         ~/.gitconfig
     symlink "gitignore"     ${DOTFILES_REPO}/git/gitignore      ~/.gitignore
 
+    symlink "inputrc"       ${DOTFILES_REPO}/misc/inputrc       ~/.inputrc
+
     symlink "karabiner"     ${DOTFILES_REPO}/karabiner          ~/.config/karabiner
 
     symlink "rclone"        ${DOTFILES_REPO}/rclone             ~/.config/rclone
 
-    symlink "screen"        ${DOTFILES_REPO}/screen/screenrc    ~/.screenrc
+    symlink "screen"        ${DOTFILES_REPO}/misc/screenrc      ~/.screenrc
 
     symlink "ssh"           ${DOTFILES_REPO}/ssh/config         ~/.ssh/config
 
