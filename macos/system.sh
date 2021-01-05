@@ -186,6 +186,9 @@ sudo pmset -a hibernatemode 3
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
+# Enable Wake on Network
+sudo pmset -a womp 1
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
