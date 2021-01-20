@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX="true"
+
 source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh

@@ -106,6 +106,7 @@ cask "signal"
 #cask "soulver" - need to manually install version 2.x
 cask "spectacle"
 cask "spotify"
+cask "stellarium"
 cask "sublime-text"
 cask "teamviewer"
 cask "textual"

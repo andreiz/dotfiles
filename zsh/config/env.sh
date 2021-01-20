@@ -1,5 +1,7 @@
 export PATH=$PATH:~/Applications/Argyll_V2.1.2/bin
 
+export EDITOR=vim
+
 export FD_OPTIONS="--follow --hidden --exclude .git --exclude node_modules"
 
 export FZF_DEFAULT_OPTS="

@@ -1,4 +1,4 @@
 ## unalias 'fd' defined in common-aliases bundle
-unalias fd
+#unalias fd
 
 alias c="clear"
