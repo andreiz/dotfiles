@@ -1,1 +1,3 @@
+*.swp
+aws/credentials
 karabiner/automatic_backups

@@ -253,6 +253,9 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # Finder: show all filename extensions
 defaults write -g AppleShowAllExtensions -bool true
 
+# Finder: do not show hidden files (use Cmd + Shift + . to show/hide)
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 

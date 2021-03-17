@@ -130,6 +130,8 @@ function setup_symlinks() {
 
     symlink "ssh"           ${DOTFILES_REPO}/ssh/config         ~/.ssh/config
 
+    symlink "sublimetext"   ${DOTFILES_REPO}/sublimetext/User   "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+
     symlink "zshrc"         ${DOTFILES_REPO}/zsh/zshrc          ~/.zshrc
     symlink "zsh config"    ${DOTFILES_REPO}/zsh/config         ~/.zsh
 
