@@ -5,6 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Package Control"
-	]
+		"Ansible",
+		"Jinja2",
+		"Package Control",
+	],
 }

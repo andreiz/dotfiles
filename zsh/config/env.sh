@@ -1,4 +1,4 @@
-export PATH=$PATH:~/Applications/Argyll_V2.1.2/bin
+export PATH=$PATH:~/Applications/Argyll_V2.1.2/bin:~/Library/Python/3.9/bin
 
 export EDITOR=vim
 
@@ -20,3 +20,5 @@ export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
 export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
 
 export BAT_THEME="TwoDark"
+
+
