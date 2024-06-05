@@ -1,13 +1,10 @@
 # "¬" charachter tells osascript that the line continues
 set login_item_list to {¬
-    "Alfred 4",¬
-    "BetterTouchTool",¬
+    "Alfred 5",¬
     "Dropbox",¬
     "Fantastical",¬
     "Karabiner-Elements",¬
-    "Things3",¬
-    "ThingsMacSandboxHelper",¬
-    "Vanilla"¬
+    "Things3"¬
 }
 
 tell application "System Events" to delete every login item

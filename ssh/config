@@ -18,40 +18,9 @@ Host ec2
   User ubuntu
   IdentityFile ~/Dropbox/Common/Certificates/aws/default.pem
 
-Host stream-ec2
-  HostName 44.234.40.63
-  User ubuntu
-  IdentityFile ~/Dropbox/Common/Certificates/aws/default.pem
-
 Host whatbox
   HostName atlantis.whatbox.ca
   User bonohyp
-
-Host qnap
-   Port 6122
-
-Host qnap.remote
-  HostName home.zmievski.org
-  Port 9022
-  LocalForward 7878 192.168.11.11:7878
-  LocalForward 8989 192.168.11.11:8989
-  LocalForward 8384 192.168.11.11:8384
-  LocalForward 9117 192.168.11.11:9117
-  LocalForward 9443 192.168.11.23:443
-
-Host docker.remote
-  HostName 192.168.11.11
-  ProxyJump qnap.remote
-  User andrei
-  LocalForward 7878 192.168.11.11:7878
-  LocalForward 8989 192.168.11.11:8989
-  LocalForward 8384 192.168.11.11:8384
-  LocalForward 9117 192.168.11.11:9117
-
-Host plex.remote
-  HostName 192.168.11.10
-  ProxyJump qnap.remote
-  User andrei
 
 Host berry
   User pi

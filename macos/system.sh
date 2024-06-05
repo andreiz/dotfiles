@@ -12,14 +12,14 @@
 #- defaults write -g AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
 # Set sidebar icon size to medium
-defaults write -g NSTableViewDefaultSizeMode -int 2
+#defaults write -g NSTableViewDefaultSizeMode -int 2
 
 # Always show scrollbars
 defaults write -g AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable the over-the-top focus ring animation
-defaults write -g NSUseAnimatedFocusRing -bool false
+#defaults write -g NSUseAnimatedFocusRing -bool false
 
 # Adjust toolbar title rollover delay
 defaults write -g NSToolbarTitleViewRolloverDelay -float 0
@@ -76,8 +76,8 @@ defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # Show battery percentage in menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true
-defaults write com.apple.menuextra.battery '{ ShowPercent = YES; }'
+#defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true
+#defaults write com.apple.menuextra.battery '{ ShowPercent = YES; }'
 
 # Show text input menu
 defaults write com.apple.TextInputMenu visible -bool true
@@ -197,7 +197,7 @@ sudo pmset -a womp 1
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 36
 
 # Turn off magnification
 defaults write com.apple.dock magnification -bool false
@@ -340,7 +340,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
+# Save screenshots to a folder
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -609,11 +609,8 @@ for app in "Activity Monitor" \
     "Messages" \
     "Photos" \
     "Safari" \
-    "SizeUp" \
-    "Spectacle" \
     "SystemUIServer" \
-    "Terminal" \
-    "iCal"; do
+    "Terminal"; do
     quit "${app}"
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
