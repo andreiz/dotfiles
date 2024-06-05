@@ -7,7 +7,7 @@ fi
 
 ZSH_DISABLE_COMPFIX="true"
 
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -33,7 +33,12 @@ source /Users/andrei/.zsh/env.sh
 source /Users/andrei/.zsh/functions.sh
 source /Users/andrei/.zsh/nvm.sh
 
+setopt nocaseglob # ignore case
+setopt correct # correct spelling mistakes
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /Users/andrei/.config/broot/launcher/bash/br

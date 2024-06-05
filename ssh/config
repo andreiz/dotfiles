@@ -1,3 +1,8 @@
+Host truenas
+  Hostname truenas
+  User andrei
+  IdentityFile ~/.ssh/id-eddsa-key
+
 Host socks
   Hostname zmievski.org
   Port 22
