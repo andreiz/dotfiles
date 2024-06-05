@@ -1,70 +1,52 @@
 # Taps
 #
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 # Brew formulae
 #
-brew "ack"
 brew "antigen"
-brew "sqlite"
-brew "awscli"
-brew "b2-tools"
 brew "bat"
-brew "certbot"
+brew "bat"
+brew "bfs"
+brew "broot"
 brew "curl"
+brew "diffutils"
 brew "fd"
 brew "ffmpeg"
 brew "fzf"
 brew "git"
-brew "git-delta"
+brew "gnu-sed"
 brew "gnu-tar"
 brew "htop"
-brew "id3v2"
-brew "make"
+brew "jq"
 brew "mas"
 brew "media-info"
-brew "nmap"
-brew "nvm"
 brew "psgrep"
 brew "pstree"
-brew "python3"
+brew "pyenv"
 brew "pyenv-virtualenv"
-brew "rclone"
 brew "ripgrep"
-brew "rust"
-brew "speedtest-cli"
-brew "starship"
-brew "svn"
 brew "telnet"
 brew "timedog"
 brew "tree"
-brew "truncate"
-brew "wget"
-# brew "unrar"
+brew "trippy"
+brew "unar"
 brew "zsh"
 
 # Casks
 #
-cask "1clipboard"
 cask "1password"
-cask "adobe-acrobat-reader"
 cask "alfred"
-cask "anki"
 cask "appcleaner"
 cask "arq"
-cask "aurora-hdr"
-cask "bettertouchtool"
-cask "betterzip"
-cask "cleanmymac"
+#cask "bettertouchtool"
+#cask "betterzip"
 cask "daisydisk"
-cask "displaycal"
+#cask "displaycal"
 cask "dropbox"
 cask "fantastical"
-cask "fastrawviewer"
+#cask "fastrawviewer"
 cask "font-anonymice-powerline"
 cask "font-consolas-for-powerline"
 cask "font-dejavu-sans-mono-for-powerline"
@@ -75,6 +57,8 @@ cask "font-inconsolata-dz-for-powerline"
 cask "font-inconsolata-for-powerline"
 cask "font-inconsolata-for-powerline-bold"
 cask "font-inconsolata-g-for-powerline"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
 cask "font-liberation-mono-for-powerline"
 cask "font-menlo-for-powerline"
 cask "font-meslo-for-powerline"
@@ -83,61 +67,39 @@ cask "font-noto-mono-for-powerline"
 cask "font-roboto-mono-for-powerline"
 cask "font-source-code-pro-for-powerline"
 cask "font-ubuntu-mono-derivative-powerline"
-cask "google-backup-and-sync"
-cask "google-chrome"
-cask "iterm2"
+cask "heynote"
+cask "iina"
 cask "karabiner-elements"
-cask "keybase"
-cask "kid3"
-cask "kindle"
 cask "numi"
 cask "nvalt"
-cask "osxfuse"
-cask "plex-media-player"
+cask "private-internet-access"
 cask "qlcolorcode"
 cask "qlmarkdown"
 cask "qlstephen"
 cask "quicklook-json"
-cask "photosync"
+#cask "photosync"
 cask "private-internet-access"
-# cask "qfinder-pro"
-cask "sonos"
 cask "signal"
-#cask "soulver" - need to manually install version 2.x
-cask "spectacle"
-cask "spotify"
-cask "stellarium"
-cask "sublime-text"
-cask "teamviewer"
-cask "textual"
 cask "timemachineeditor"
-cask "thingsmacsandboxhelper"
-cask "transmit"
-# cask "ubiquiti-unifi-controller"
-cask "unetbootin"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
-cask "viscosity"
+#cask "transmit"
+#cask "viscosity"
 cask "vlc"
-cask "vox"
-cask "xee"
-cask "zoom"
+#cask "xee"
+#cask "zoom"
 
 # Apple Store apps
 #
+mas "AdGuard for Safari", id: 1440147259
 mas "Bear", id: 1091189122
 mas "Disk Speed Test", id: 425264550
-#mas "Display Maid", id: 450063525
-#mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "Monosnap", id: 540348655
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+#mas "Numbers", id: 409203825
+#mas "Pages", id: 409201541
+#mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Pins", id: 1547106997
 mas "Slack", id: 803453959
-mas "The Unarchiver", id: 425424353
+#mas "The Unarchiver", id: 425424353
+mas "Tailscale", id: 1475387142
 mas "Things", id: 904280696
-#mas "uBlock", id: 1385985095
-mas "Unsplash Wallpapers", id: 1284863847
-mas "Vimari", id: 1480933944
+#mas "Unsplash Wallpapers", id: 1284863847
+#mas "Vimari", id: 1480933944
